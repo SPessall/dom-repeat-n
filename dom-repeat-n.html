@@ -130,7 +130,7 @@ Example:
         }
         // Remove any extra instances from previous state
         var limit = this._instances.length;
-        for (i=newCount; i<limit; i++) {
+        for (i=limit-1; i>newCount-1; i--) {
           this._detachAndRemoveInstance(i);
         }
         this._debounceTemplate(this._render);
